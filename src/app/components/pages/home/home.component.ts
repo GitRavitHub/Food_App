@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FoodService } from '../services/food/food.service';
+import { FoodService } from '../../../services/food/food.service';
 
 @Component({
   selector: 'app-home',
@@ -9,12 +9,15 @@ import { FoodService } from '../services/food/food.service';
 export class HomeComponent implements OnInit {
 
   // Assuming 'getAll()' returns an array of any type (preferably define a more specific type)
-  foods: any[] = [];  // Changed from String[] to any[] for generality; specify further if known
+   // Changed from String[] to any[] for generality; specify further if known
 
-  constructor(private foodService: FoodService) {}
-
+  constructor(private fS: FoodService) {
+    
+  }
+  foods: any[]=[];
   ngOnInit(): void {
     // Fetch foods from the service
-    this.foods = this.foodService.getAll();
+    this.foods = this.fS.getAll();
+    console.log(this.foods)
   }
 }
