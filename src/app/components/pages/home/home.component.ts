@@ -1,23 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { FoodService } from '../../../services/food/food.service';
-
+import { FoodService } from '../../../services/food/food.service'; 
+import { Food } from '../../../shared/models/Food'; 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']  // Corrected to styleUrls as an array
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
 
-  // Assuming 'getAll()' returns an array of any type (preferably define a more specific type)
-   // Changed from String[] to any[] for generality; specify further if known
+  foods:Food[] = [];
+  constructor(private foodService:FoodService) { }
 
-  constructor(private fS: FoodService) {
-    
-  }
-  foods: any[]=[];
   ngOnInit(): void {
-    // Fetch foods from the service
-    this.foods = this.fS.getAll();
-    console.log(this.foods)
+    this.foods = this.foodService.getAll();
   }
 }
