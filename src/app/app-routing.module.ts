@@ -10,7 +10,7 @@ import { RegisterPageComponent } from './components/pages/register-page/register
 const routes: Routes = [
   { path: '', component: HomeComponent },
   {path:'cart-page', component: CartPageComponent},
-  {path:'food-page', component:FoodPageComponent},
+  {path:'fp', component:FoodPageComponent},
   {path:'login', component: LoginPageComponent},
   {path:'register', component: RegisterPageComponent},
 
