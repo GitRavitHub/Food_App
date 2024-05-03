@@ -12,7 +12,7 @@ import { FoodPageComponent } from './components/pages/food-page/food-page.compon
 import { LoginPageComponent } from './components/pages/login-page/login-page.component';
 import { OrderTrackPageComponent } from './components/pages/order-track-page/order-track-page.component';
 import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
-import { RatingModule } from 'ng-starrating';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -32,6 +32,7 @@ import { RatingModule } from 'ng-starrating';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
   ],
   providers: [
     provideClientHydration()
