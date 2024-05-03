@@ -32,7 +32,6 @@ import { RatingModule } from 'ng-starrating';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RatingModule
   ],
   providers: [
     provideClientHydration()
