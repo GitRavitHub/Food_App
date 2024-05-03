@@ -7,4 +7,23 @@ import { Component } from '@angular/core';
 })
 export class LoginPageComponent {
 
+  username: string = '';
+  password: string = '';
+
+  constructor() { }
+
+  login() {
+    // Add login functionality here
+    console.log('Logging in with username:', this.username, 'and password:', this.password);
+  }
+
+  forgotPassword() {
+    // Add forgot password functionality here
+    console.log('Forgot Password?');
+  }
+
+  register() {
+    // Add registration functionality here
+    console.log('Register');
+  }
 }
