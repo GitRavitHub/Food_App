@@ -15,7 +15,6 @@ import { PaymentPageComponent } from './components/pages/payment-page/payment-pa
 
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +31,7 @@ import { PaymentPageComponent } from './components/pages/payment-page/payment-pa
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
   ],
   providers: [
     provideClientHydration()
