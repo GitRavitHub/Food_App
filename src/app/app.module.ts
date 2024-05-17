@@ -4,6 +4,7 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { FormsModule } from '@angular/forms';  // Import FormsModule
 import { HomeComponent } from './components/pages/home/home.component';
 import { RegisterPageComponent } from './components/pages/register-page/register-page.component';
 import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
