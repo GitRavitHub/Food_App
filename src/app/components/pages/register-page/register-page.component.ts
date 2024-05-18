@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -19,7 +20,11 @@ export class RegisterPageComponent {
 
   constructor(private router: Router) {}
 
-  onSubmit() {
+  onSubmit(registerForm: NgForm) {
+    if (registerForm.invalid) {
+      return; // If the form is invalid, do not proceed
+    }
+
     if (this.formData.password !== this.formData.confirmPassword) {
       this.passwordError = true;
       return;
