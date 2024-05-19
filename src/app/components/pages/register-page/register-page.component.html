@@ -22,8 +22,9 @@
   </div>
   <div>
     <label for="phone">Phone Number:</label>
-    <input type="tel" id="phone" name="phone" [(ngModel)]="formData.phone" required>
+    <input type="tel" id="phone" name="phone" [(ngModel)]="formData.phone" required pattern="[0-9]{10}">
     <div *ngIf="registerForm.submitted && !formData.phone" style="color: red;">Phone Number is required.</div>
+    <div *ngIf="registerForm.submitted && formData.phone && !registerForm.controls['phone'].valid" style="color: red;">Please enter a valid phone number.</div>
   </div>
   <div>
     <label for="address">Address:</label>
