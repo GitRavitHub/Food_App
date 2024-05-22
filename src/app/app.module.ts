@@ -13,6 +13,7 @@ import { FoodPageComponent } from './components/pages/food-page/food-page.compon
 import { LoginPageComponent } from './components/pages/login-page/login-page.component';
 import { OrderTrackPageComponent } from './components/pages/order-track-page/order-track-page.component';
 import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
+import { ForgotPasswordComponent } from './components/pages/forgot-password/forgot-password.component';
 
 
 
@@ -27,7 +28,8 @@ import { PaymentPageComponent } from './components/pages/payment-page/payment-pa
     FoodPageComponent,
     LoginPageComponent,
     OrderTrackPageComponent,
-    PaymentPageComponent
+    PaymentPageComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,
