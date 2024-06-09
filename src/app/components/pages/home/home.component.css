@@ -1,74 +1,112 @@
-ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    list-style-type: none;
-    padding: 0;
+/* Center the search bar container */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
 }
 
-ul li a{
-    height: 22.5rem;
-    width: 20rem;
-    border: 1px solid whitesmoke;
-    border-radius: 1rem;
-    margin: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    color: #e72929;
-}
-li a:hover{
-    opacity: 0.7;
-    cursor: pointer;
+/* Style the search bar */
+.search-container input {
+  width: 300px;
+  padding: 10px;
+  border: 2px solid #e72929;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
-.content{
-    padding: .5rem 1rem;
-    position: relative;
+/* Style the tags container */
+.tags-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-.favorite{
-    position: absolute;
-    top: .5rem;
-    right: 1rem;
-    font-size: 1.2rem;
+.tag {
+  background-color: #e72929;
+  color: white;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
 }
 
-.favorite.not{
-    color: grey;
+.tag:hover {
+  background-color: #d91b1b;
 }
 
-.stars{
-    margin-bottom: .2rem;
+/* Existing styles */
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
 }
 
-.product-item-footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+ul li a {
+  height: 22.5rem;
+  width: 20rem;
+  border: 1px solid whitesmoke;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #e72929;
 }
 
-.origins{
-    flex: 9;
+li a:hover {
+  opacity: 0.7;
+  cursor: pointer;
 }
 
-.origins span{
-    border-radius: 2rem;
-    background-color: whitesmoke;
-    display: inline-block;
-    font-size: .7rem;
-    color: grey;
-    margin-right: .3rem;
+.content {
+  padding: .5rem 1rem;
+  position: relative;
 }
 
-.cook-time{
-    font-size: .8rem;
-    flex: 3;
-    text-align: right;
+.favorite {
+  position: absolute;
+  top: .5rem;
+  right: 1rem;
+  font-size: 1.2rem;
 }
 
-.price{
-    color:#414141;
-    margin-top: .7rem;
+.favorite.not {
+  color: grey;
+}
+
+.stars {
+  margin-bottom: .2rem;
+}
+
+.product-item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.origins {
+  flex: 9;
+}
+
+.origins span {
+  border-radius: 2rem;
+  background-color: whitesmoke;
+  display: inline-block;
+  font-size: .7rem;
+  color: grey;
+  margin-right: .3rem;
+}
+
+.cook-time {
+  font-size: .8rem;
+  flex: 3;
+  text-align: right;
+}
+
+.price {
+  color: #414141;
+  margin-top: .7rem;
 }

@@ -7,16 +7,15 @@ import { LoginPageComponent } from './components/pages/login-page/login-page.com
 import { RegisterPageComponent } from './components/pages/register-page/register-page.component';
 import { ForgotPasswordComponent } from './components/pages/forgot-password/forgot-password.component';
 
-
-
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  {path:'cart-page', component: CartPageComponent},
-  {path:'fp', component:FoodPageComponent},
-  {path:'login', component: LoginPageComponent},
-  {path:'register', component: RegisterPageComponent},
-  {path:'forgot-password', component: ForgotPasswordComponent}
-
+  { path: 'cart-page', component: CartPageComponent },
+  { path: 'fp', component: FoodPageComponent },
+  { path: 'login', component: LoginPageComponent },
+  { path: 'register', component: RegisterPageComponent },
+  { path: 'forgot-password', component: ForgotPasswordComponent },
+  { path: 'tag/:tag', component: HomeComponent },
+  { path: 'food-page', component: FoodPageComponent } // Define the food page route
 ];
 
 @NgModule({
@@ -24,4 +23,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-

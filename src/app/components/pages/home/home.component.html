@@ -1,31 +1,44 @@
+<div class="search-container">
+  <input type="text" [(ngModel)]="searchTerm" placeholder="Search foods...">
+</div>
+
+<div class="tags-container">
+  <span *ngFor="let tag of allTags" (click)="filterByTag(tag)" class="tag">
+    {{ tag }}
+  </span>
+</div>
+
 <ul>
-  <li *ngFor="let food of foods">
+  <li *ngFor="let food of filteredFoods(); let isLast = last">
     <a routerLink="/food/{{food.id}}">
-        <img src="{{food.imageUrl}}" alt="">
-        <div class="content">
-            <div class="name">
-               {{food.name}}
-            </div>
-            <span class="favorite {{food.favorite?'':'not'}}">
-                ❤
-            </span>
-           </div>
-            <div class="product-item-footer">
-                <div class="origins">
-                    <span *ngFor="let origin of food.origins">
-                         {{origin}}
-                    </span>
-                </div>
-                <div class="cook-time">
-                    <span>🕒</span>
-                    {{food.cookTime}}
-                </div>
-            </div>
-            <div class="price">
-                <span>
-                    {{food.price|currency}}
-                </span>
-            </div>
+      <img src="{{food.imageUrl}}" alt="">
+      <div class="content">
+        <div class="name">
+          {{food.name}}
+        </div>
+        <span class="favorite {{food.favorite ? '' : 'not'}}">
+          ❤
+        </span>
+      </div>
+      <div class="product-item-footer">
+        <div class="origins">
+          <span *ngFor="let origin of food.origins">
+            {{origin}}
+          </span>
+        </div>
+        <div class="cook-time">
+          <span>🕒</span>
+          {{food.cookTime}}
+        </div>
+      </div>
+      <div class="price">
+        <span>
+          {{food.price | currency}}
+        </span>
+      </div>
     </a>
+  </li>
+  <li *ngIf="filteredFoods().length === 0">
+    Food item not found
   </li>
 </ul>

@@ -14,6 +14,7 @@ import { LoginPageComponent } from './components/pages/login-page/login-page.com
 import { OrderTrackPageComponent } from './components/pages/order-track-page/order-track-page.component';
 import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
 import { ForgotPasswordComponent } from './components/pages/forgot-password/forgot-password.component';
+import { FoodDetailsComponent } from './components/food-details/food-details.component';
 
 
 
@@ -29,7 +30,8 @@ import { ForgotPasswordComponent } from './components/pages/forgot-password/forg
     LoginPageComponent,
     OrderTrackPageComponent,
     PaymentPageComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    FoodDetailsComponent
   ],
   imports: [
     BrowserModule,

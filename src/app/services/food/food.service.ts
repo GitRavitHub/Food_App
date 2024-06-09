@@ -7,6 +7,14 @@ import { Food } from '../../shared/models/Food';
 export class FoodService {
 
   constructor() { }
+  getAllFoodByTag(tag:string) :Food[]{
+    if(tag == 'All')
+      return this.getAll()
+    else
+    return this.getAll().filter(food => food.tags?.includes(tag))
+
+  }
+
 
   getAll(): Food[] {
     return [
