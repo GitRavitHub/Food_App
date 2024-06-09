@@ -23,6 +23,7 @@ export class LoginPageComponent {
     } else {
       alert('Invalid username or password.');
     }
+
   /*forgotPassword() {
     // Add forgot password functionality here
     console.log('Forgot Password?');
