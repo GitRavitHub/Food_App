@@ -51,9 +51,4 @@ export class HomeComponent implements OnInit {
     });
     return Array.from(tagsSet);
   }
-
-  // Method to navigate to the food page
-  navigateToFoodPage(): void {
-    this.router.navigate(['/food-page']);
-  }
 }
