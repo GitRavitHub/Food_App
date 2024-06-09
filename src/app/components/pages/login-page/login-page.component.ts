@@ -18,7 +18,7 @@ export class LoginPageComponent {
 
     if (this.username === 'admin' && this.password === 'password') {
 
-      this.router.navigate(['/fp']);  // Navigate to the home page on successful login
+      this.router.navigate(['/fp']);
     } else {
       alert('Invalid username or password.');
     }
