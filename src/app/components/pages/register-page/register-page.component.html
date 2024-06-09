@@ -1,0 +1,36 @@
+<form (ngSubmit)="onSubmit(registerForm)" #registerForm="ngForm">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="formData.name" required>
+    <div *ngIf="registerForm.submitted && !formData.name" style="color: red;">Name is required.</div>
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" [(ngModel)]="formData.email" required email pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$">
+    <div *ngIf="registerForm.submitted && !formData.email" style="color: red;">Email is required.</div>
+    <div *ngIf="registerForm.submitted && formData.email && !registerForm.controls['email'].valid" style="color: red;">Please enter a valid email.</div>
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" [(ngModel)]="formData.password" required>
+    <div *ngIf="registerForm.submitted && !formData.password" style="color: red;">Password is required.</div>
+  </div>
+  <div>
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" [(ngModel)]="formData.confirmPassword" required>
+    <div *ngIf="registerForm.submitted && !formData.confirmPassword" style="color: red;">Confirm Password is required.</div>
+  </div>
+  <div>
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" [(ngModel)]="formData.phone" required pattern="[0-9]{10}">
+    <div *ngIf="registerForm.submitted && !formData.phone" style="color: red;">Phone Number is required.</div>
+    <div *ngIf="registerForm.submitted && formData.phone && !registerForm.controls['phone'].valid" style="color: red;">Please enter a valid phone number.</div>
+  </div>
+  <div>
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" [(ngModel)]="formData.address" required></textarea>
+    <div *ngIf="registerForm.submitted && !formData.address" style="color: red;">Address is required.</div>
+  </div>
+  <div *ngIf="passwordError" style="color: red;">Passwords do not match.</div>
+  <button type="submit">Register</button>
+</form>
