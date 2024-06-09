@@ -16,7 +16,6 @@ export class LoginPageComponent {
   onSubmit() {
     console.log('Logging in with username:', this.username, 'and password:', this.password);
 
-    // Simulate login
     if (this.username === 'admin' && this.password === 'password') {
 
       this.router.navigate(['/fp']);  // Navigate to the home page on successful login
