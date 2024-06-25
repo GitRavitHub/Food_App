@@ -1,1 +1,7 @@
-<p>cart-page works!</p>
+<div *ngIf="isCartEmpty()" class="empty-cart-message">
+  Cart is empty, please order and enjoy our food.
+</div>
+
+<div *ngIf="!isCartEmpty()">
+  <!-- Your existing cart display logic -->
+</div>
